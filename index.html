@@ -14,11 +14,18 @@
 
 <div ng-controller="ToDoController as todoCtrl">
 
-	<h2>Total Tasks: {{totalTodos}}</h2>
-		<ul >
+	<h2>Total Tasks: {{todoTasks.length}}</h2>
+		<ul>
 			<li ng-repeat="task in todoTasks | orderBy:'priority'" >
-				{{task.priority}} --
-				{{task.text}}
+
+				<p>
+					{{task.text}}
+					<span>
+						<button ng-click="deleteTask($index)" class="btn btn-default">d</button>
+					</span>
+				</p>
+
+
 			</li>
 		</ul>
 

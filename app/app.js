@@ -9,14 +9,15 @@
 			{text: 'Train BJJ', priority: '2', done: false}
 		];
 
-		$scope.totalTodos = $scope.todoTasks.length;
-
 		$scope.addTask = function() {
 			$scope.todoTasks.push({text: $scope.formTask, priority: $scope.formPriority, done: false})
 		};
 
+		$scope.deleteTask = function(index) {
+			$scope.todoTasks.splice(index, 1);
+		};
 
-
+		$scope.totalTodos = $scope.todoTasks.length;
 
 	});
 
