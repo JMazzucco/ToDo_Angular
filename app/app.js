@@ -3,13 +3,13 @@
 
 	app.controller('ToDoController', function($scope){
 
-		$scope.todo = [
+		$scope.todoTasks = [
 			{text: 'Learn Angular', priority: 'high', done: false},
 			{text: 'Learn Python', priority: 'low', done: false},
 			{text: 'Train BJJ', priority: 'medium', done: false}
 		];
 
-		$scope.totalTodos = $scope.todo.length;
+		$scope.totalTodos = $scope.todoTasks.length;
 
 		$scope.addTask = function() {
 

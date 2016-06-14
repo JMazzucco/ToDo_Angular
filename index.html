@@ -15,7 +15,13 @@
 <div ng-controller="ToDoController as todoCtrl">
 
 	<h2>Total Tasks: {{totalTodos}}</h2>
+		<ul >
+			<li ng-repeat="task in todoTasks">
+				{{task.priority}} --
+				{{task.text}}
 
+			</li>
+		</ul>
 
 	<form novalidate class="simple-form" ng-submit="addTask()">
 		Task:
