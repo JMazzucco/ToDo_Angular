@@ -16,10 +16,9 @@
 
 	<h2>Total Tasks: {{totalTodos}}</h2>
 		<ul >
-			<li ng-repeat="task in todoTasks">
+			<li ng-repeat="task in todoTasks | orderBy:'priority'" >
 				{{task.priority}} --
 				{{task.text}}
-
 			</li>
 		</ul>
 
@@ -30,9 +29,9 @@
 
 		Priority:
 		<select name="priority" ng-model="formPriority">
-			<option value="high">high</option>
-			<option value="medium">medium</option>
-			<option value="low">low</option>
+			<option value="1">high</option>
+			<option value="2">medium</option>
+			<option value="3">low</option>
 		</select>
 		<br/>
 
