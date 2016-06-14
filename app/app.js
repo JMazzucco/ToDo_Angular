@@ -12,8 +12,10 @@
 		$scope.totalTodos = $scope.todoTasks.length;
 
 		$scope.addTask = function() {
-
+			$scope.todoTasks.push({text: $scope.formTask, priority: $scope.formPriority, done: false})
 		};
+
+
 
 
 	});
