@@ -11,6 +11,8 @@
 			{text: 'Train BJJ', priority: 'medium', done: false}
 		];
 
+		$scope.totalTodos = $scope.todo.length;
+
 	});
 
 })();
