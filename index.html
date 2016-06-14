@@ -14,8 +14,24 @@
 
 <div ng-controller="ToDoController as todoCtrl">
 
-	<h2>Total Todos: {{totalTodos}}</h2>
+	<h2>Total Tasks: {{totalTodos}}</h2>
 
+
+	<form novalidate class="simple-form" ng-submit="addTask()">
+		Task:
+		<input type="text" ng-model="formTask">
+		<br/>
+
+		Priority:
+		<select name="priority" ng-model="formPriority">
+			<option value="high">high</option>
+			<option value="medium">medium</option>
+			<option value="low">low</option>
+		</select>
+		<br/>
+
+		<input type="submit"/>
+	</form>
 </div>
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
