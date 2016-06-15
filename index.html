@@ -21,27 +21,27 @@
 				<p>
 					{{task.text}}
 					<span>
-						<button ng-click="deleteTask($index)" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></button>
+						<button ng-click="deleteTask($index)" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
 					</span>
 				</p>
 
 			</li>
 		</ul>
 
-	<form novalidate class="simple-form" ng-submit="addTask()">
+	<form novalidate class="simple-form form-group" ng-submit="addTask()">
 		Task:
-		<input type="text" ng-model="formTask">
+		<input class="form-control" type="text" ng-model="formTask">
 		<br/>
 
 		Priority:
-		<select name="priority" ng-model="formPriority">
+		<select class="form-control" name="priority" ng-model="formPriority">
 			<option value="1">high</option>
 			<option value="2">medium</option>
 			<option value="3">low</option>
 		</select>
 		<br/>
 
-		<input type="submit">
+		<input class="btn btn-primary" type="submit">
 	</form>
 </div>
 
