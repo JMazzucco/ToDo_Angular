@@ -1,3 +1,10 @@
+body{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -7,19 +14,20 @@ li {
 	margin-bottom: 25px;
 }
 
-body{
-	 display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-}
-
 .main {
 	margin: auto;
 	width: 25%;
 
 }
 
- * {
-		margin: auto;
+.priority-1 {
+	color: tomato;
+}
+
+.priority-2 {
+	color: blue;
+}
+
+.priority-3 {
+	color: green;
 }
