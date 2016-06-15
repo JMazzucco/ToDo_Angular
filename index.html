@@ -12,23 +12,27 @@
 </head>
 <body>
 
-<div ng-controller="ToDoController as todoCtrl">
+<div class="main" ng-controller="ToDoController as todoCtrl">
 
-	<h2>Total Tasks: {{todoTasks.length}}</h2>
+
 		<ul>
 			<li ng-repeat="task in todoTasks | orderBy:'priority'" >
 
-				<p>
-					{{task.text}}
+				<div>
+					<span class="priority-{{task.priority}}">{{task.text}}</span>
 					<span>
 						<button ng-click="deleteTask($index)" class="btn btn-default">
 							<i class="glyphicon glyphicon-remove"></i>
 						</button>
 					</span>
-				</p>
+				</div>
 
 			</li>
 		</ul>
+
+	<h3>Total Tasks: {{todoTasks.length}}</h3>
+
+	<br/><br/>
 
 	<form novalidate class="simple-form form-group" ng-submit="addTask()">
 		Task:
